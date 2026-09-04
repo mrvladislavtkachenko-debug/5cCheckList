@@ -1,0 +1,15 @@
+# Токены и секреты
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Тестовая документация
+.idea/
+.vscode/
