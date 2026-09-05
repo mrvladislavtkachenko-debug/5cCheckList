@@ -1,0 +1,26 @@
+# Зависимости
+node_modules/
+
+# Локальные данные
+data/audits/*.json
+data/photos/*
+reports/*.xlsx
+
+# Конфигурация
+.env
+.env.local
+.env.*.local
+
+# Логи
+*.log
+npm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
