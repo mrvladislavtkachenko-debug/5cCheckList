@@ -1,0 +1,53 @@
+{
+  "source_commit": "3fdca2bd9f76e52ae0ac5778e7d35fdd8186002f",
+  "source_branch": "arena/01a0706d-5cchecklist",
+  "instruction": "И-ГЦ-02 Инструкция по обработке овощей и зелени (1).pdf",
+  "instruction_page": 3,
+  "date": "2026-09-05",
+  "programs": [
+    {"id": 1, "wash_rpm": 30, "wash_s": 60, "rinse_rpm": 150, "rinse_s": 30, "spin_rpm": 400, "spin_s": 360},
+    {"id": 2, "wash_rpm": 30, "wash_s": 60, "rinse_rpm": 150, "rinse_s": 60, "spin_rpm": 150, "spin_s": 60},
+    {"id": 3, "wash_rpm": 30, "wash_s": 120, "rinse_rpm": 150, "rinse_s": 60, "spin_rpm": 250, "spin_s": 120}
+  ],
+  "products": [
+    {"name": "Латук", "group": "Зелень", "program": 1, "max_kg": 1.5, "demo_batches": 2, "prep_s": 100},
+    {"name": "Базилик", "group": "Зелень", "program": 1, "max_kg": 1.5, "demo_batches": 1, "prep_s": 110},
+    {"name": "Петрушка", "group": "Зелень", "program": 1, "max_kg": 1.5, "demo_batches": 1, "prep_s": 120},
+    {"name": "Томат", "group": "Овощи и прочее", "program": 2, "max_kg": 5, "demo_batches": 5, "prep_s": 35},
+    {"name": "Белокочанная капуста", "group": "Овощи и прочее", "program": 2, "max_kg": 3, "demo_batches": 3, "prep_s": 55},
+    {"name": "Укроп", "group": "Зелень", "program": 3, "max_kg": 1.5, "demo_batches": 2, "prep_s": 115},
+    {"name": "Зеленый лук", "group": "Зелень", "program": 3, "max_kg": 1.5, "demo_batches": 1, "prep_s": 100},
+    {"name": "Кинза", "group": "Зелень", "program": 3, "max_kg": 1.5, "demo_batches": 1, "prep_s": 120},
+    {"name": "Шампиньоны", "group": "Овощи и прочее", "program": 3, "max_kg": 5, "demo_batches": 2, "prep_s": 65},
+    {"name": "Перец болгарский красный", "group": "Овощи и прочее", "program": 3, "max_kg": 5, "demo_batches": 3, "prep_s": 45},
+    {"name": "Огурец", "group": "Овощи и прочее", "program": 3, "max_kg": 5, "demo_batches": 4, "prep_s": 35},
+    {"name": "Редис", "group": "Овощи и прочее", "program": 3, "max_kg": 3, "demo_batches": 1, "prep_s": 60},
+    {"name": "Сельдерей ствол", "group": "Овощи и прочее", "program": 3, "max_kg": 1.5, "demo_batches": 1, "prep_s": 70},
+    {"name": "Сельдерей корень", "group": "Овощи и прочее", "program": 3, "max_kg": 1.5, "demo_batches": 1, "prep_s": 65},
+    {"name": "Тыква", "group": "Овощи и прочее", "program": 3, "max_kg": 3, "demo_batches": 1, "prep_s": 45},
+    {"name": "Имбирь", "group": "Овощи и прочее", "program": 3, "max_kg": 3, "demo_batches": 1, "prep_s": 55},
+    {"name": "Лимон", "group": "Овощи и прочее", "program": 3, "max_kg": 2, "demo_batches": 1, "prep_s": 30},
+    {"name": "Апельсин", "group": "Овощи и прочее", "program": 3, "max_kg": 2, "demo_batches": 1, "prep_s": 30}
+  ],
+  "elements": [
+    {"name": "Осмотреть упаковку и сырьё", "kind": "Ручная", "endpoint": "Осмотр партии завершён", "base_s": 25, "target_factor": 1},
+    {"name": "Отсортировать / подготовить сырьё", "kind": "Ручная", "endpoint": "Подготовленное сырьё отложено", "base_s": 0, "target_factor": 1},
+    {"name": "Отвесить допустимую партию", "kind": "Ручная", "endpoint": "Масса партии проверена", "base_s": 22, "target_factor": 0.9},
+    {"name": "Перейти с партией к SOLIA", "kind": "Переход", "endpoint": "Оператор у SOLIA", "base_s": 12, "target_factor": 0.5},
+    {"name": "Загрузить, выбрать программу, запустить", "kind": "Ручная", "endpoint": "Программа запущена", "base_s": 35, "target_factor": 0.85},
+    {"name": "Автоматическая программа / ожидание", "kind": "Авто/ожидание", "endpoint": "Полный цикл программы завершён", "base_s": 0, "target_factor": 1},
+    {"name": "Выгрузить в чистую маркированную тару", "kind": "Ручная", "endpoint": "Выгрузка завершена", "base_s": 30, "target_factor": 0.9},
+    {"name": "Проверить качество и маркировку", "kind": "Ручная", "endpoint": "Результат проверки подтверждён", "base_s": 18, "target_factor": 1},
+    {"name": "Передать в зону чистой продукции", "kind": "Переход", "endpoint": "Партия передана", "base_s": 10, "target_factor": 0.5},
+    {"name": "Вернуться к началу цикла", "kind": "Переход", "endpoint": "Возврат на исходную позицию", "base_s": 10, "target_factor": 0.5},
+    {"name": "Внеплановый поиск тары / ожидание", "kind": "Потери", "endpoint": "Причина задержки устранена", "base_s": 12, "target_factor": 0}
+  ],
+  "periodic": [
+    {"name": "Слить бак после каждой 4-й помывки", "event": "Санобработка", "frequency": 4, "before": [60, 65, 70], "target": [60, 65, 70], "source": "И-ГЦ-02, стр. 3: обязательная последовательность; время — ДЕМО"},
+    {"name": "После слива выключить и обесточить оборудование", "event": "Санобработка", "frequency": 4, "before": [15, 18, 16], "target": [15, 18, 16], "source": "И-ГЦ-02, стр. 3: обязательная последовательность; время — ДЕМО"},
+    {"name": "Промыть бак моющими средствами", "event": "Санобработка", "frequency": 4, "before": [240, 255, 250], "target": [240, 255, 250], "source": "И-ГЦ-02, стр. 3; средство, режим и фактическое время уточнить"},
+    {"name": "Продезинфицировать бак по утверждённой программе", "event": "Санобработка", "frequency": 4, "before": [480, 500, 490], "target": [480, 500, 490], "source": "Время — только ДЕМО, НЕ экспозиция средства. Не задаёт концентрацию, температуру или выдержку"},
+    {"name": "Восстановить готовность SOLIA по паспорту оборудования", "event": "Санобработка", "frequency": 4, "before": [120, 130, 125], "target": [120, 130, 125], "source": "Плановое дополнение: действия и время сверить с паспортом SOLIA и санпрограммой"},
+    {"name": "Подать комплект чистой тары до 1-го цикла и далее каждые 8 циклов", "event": "Подача тары", "frequency": 8, "before": [60, 65, 70], "target": [45, 50, 48], "source": "ДЕМО: периодичность и время заменить наблюдениями; не входит в фиксированную подготовку смены"}
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "test_cases": 17,
+  "formula_count": 11862,
+  "chart_count": 4,
+  "formula_engine": "Python formulas (not a GUI Excel/LibreOffice test)",
+  "checks": "Independent arithmetic model, whole-cycle exclusions, formula propagation, zero/invalid inputs, exact monoproduct capacity, sanitary event counting, source/target separation, audit completion and resource guards",
+  "demo_before": {
+    "cycles": 32,
+    "kilograms": 107.0,
+    "available": 24600,
+    "takt": 768.75,
+    "cleaning_count": 8,
+    "periodic": 7560,
+    "cyclic": 17031.760000000002,
+    "total": 24591.760000000002,
+    "mean_total": 24695.208,
+    "active": 15351.759999999998,
+    "machine": 18723.503005403396,
+    "weighted_cycle": 532.2425000000001,
+    "load": 0.9996650406504066
+  },
+  "demo_target": {
+    "cycles": 32,
+    "kilograms": 107.0,
+    "available": 24600,
+    "takt": 768.75,
+    "cleaning_count": 8,
+    "periodic": 7500,
+    "cyclic": 15754.08,
+    "total": 23254.08,
+    "mean_total": 23348.231999999996,
+    "active": 14014.080000000002,
+    "machine": 18438.150181379875,
+    "weighted_cycle": 492.315,
+    "load": 0.9452878048780489
+  },
+  "source_commit": "3fdca2bd9f76e52ae0ac5778e7d35fdd8186002f",
+  "sources": {
+    "И-ГЦ-02 Инструкция по обработке овощей и зелени (1).pdf": "0fb8ef8dd232869edca1f76abf8bfd9fbc718bf1898a0c38b924048ecb96f92b",
+    "МУ стандартизированная работа.pdf": "00723265e65666e6cec6318d080a54eef8966d9d550f28227daf9e0d5e9f7788",
+    "Приложение №3. Бланки Стандартизированной работы.pdf": "c5504294da4dc8a73cd18181c417f3fb005c5293c93f3ae9e50c4b86d291f4ec",
+    "Приложение №3. Бланки Стандартизированной работы.xlsx": "f863c8dfbbdb9efdf87e897912ac120175706f693a79bffae97b4838b7879caf",
+    "Приложение №4. Пример заполнения для I типа работы.xlsx": "21c3272caef403356ad85f129a98b44626158efbc00cffac326b68fcdc6fc7a0",
+    "Приложение №5. Пример заполнения для II типа работы.xlsx": "88756fd9c8751f8a3bf769a2e61ed95de274a214503f937ca700ef377f02a13e",
+    "Приложение №6. Пример заполнения для III типа работы.xlsx": "483903f9ea2cfd8091cd256da30d20e2c59ec0f9971baa8273ec0abc14a098f0",
+    "Приложение №7. Критерии качества стандартизированной работы.xlsx": "80ac9a1473eb8e11ead601be4ad437482c6c17c1d7b47915c484029a13288e96",
+    "Приложение №8. Чек лист проверки СОП.xlsx": "919f5ddd86ea94d03408262fbe9289de212a53c724b1795f832fcb422f2f835a"
+  },
+  "workbook_sha256": "b58c90ae99d5c69a049d540af71d66f2454700f0db5fa02f913385335ca79357",
+  "layout_check": "Print-layout pass: identical input, text and formula cells to the 17-test verified version; all formula/chart caches recalculated again."
+}
